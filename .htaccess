@@ -1,0 +1,9 @@
+php_flag display_errors Off
+php_value post_max_size 128M
+php_value upload_max_filesize 128M
+php_value output_buffering 4096
+RewriteEngine On
+RewriteRule !\.(bmp|gif|tiff|jpg|jpeg|png|css|js|html|ico|zip|rar|pdf|xml|3gp|mp4|mpg|flv|swf|mkv|ogg|avi|woff|svg|eot|ttf|jar)$ index.php
+
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.tokunbomall.ng/$1 [R,L]
